@@ -1,0 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
