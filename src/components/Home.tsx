@@ -1,4 +1,5 @@
 import React from 'react';
+import AccountButton from "./TopBar/components/AccountButton";
 
 export function Home() {
   return (
@@ -24,6 +25,9 @@ export function Home() {
             src="/images/ROPE.png"
             alt="rope"
           />
+          <div style={{marginTop:20 }}>
+          <AccountButton />
+          </div>
           <img
             className="object-contain"
             src="/images/NFTz-coming-soon.png"
