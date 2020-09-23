@@ -1,0 +1,41 @@
+{
+    "pool": {
+    "name": "genesis",
+    "points": 10
+    },
+    "external_url": "https://dontbuymeme.com/cards/2",
+    "image": "https://images.dontbuymeme.com/genesis/vitalik-buterin-common.png",
+    "name": "Vitalik Buterin Common",
+    "description": "The Great \"Ethereum\" Vitalik",
+    "attributes": [
+        {
+            "trait_type": "Set",
+            "value": "Genesis"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        },
+        {
+            "trait_type": "Artist",
+            "value": "RektMe Rev"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Crypto Influencers"
+        },
+        {
+            "trait_type": "Tag",
+            "value": "Ethereum"
+        },
+        {
+            "display_type": "date",
+            "trait_type": "birthday",
+            "value": 1598450400
+        },
+        {
+            "trait_type": "Max Supply",
+            "value": "1000"
+        }
+    ]
+}

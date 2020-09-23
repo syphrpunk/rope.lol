@@ -1217,14 +1217,14 @@ contract ERC1155Tradable is ERC1155, ERC1155MintBurn, ERC1155Metadata, Ownable, 
  */
 contract RMU is ERC1155Tradable {
 	constructor(address _proxyRegistryAddress) public ERC1155Tradable("Rope Makers United", "RMU", _proxyRegistryAddress) {
-		_setBaseMetadataURI("https://api.rope.lol/RMU/1");
+		_setBaseMetadataURI("https://rope.lol/api/RMU/");
     /* *REPLACE* We need something like https://api.dontbuymeme.com/memes/1 - https://api.rope.lol/RMU/1 is only a placeholder
     {"pool":{"name":"genesis","points":1},"external_url":"https://dontbuymeme.com/cards/1","image":"https://images.dontbuymeme.com/genesis/meme-grail-relic.png","name":"Meme Grail Relic","description":"The Meme Holy Grail. To show our appreciation to all humble farmers","attributes":[{"trait_type":"Set","value":"Genesis"},{"trait_type":"Rarity","value":"Relic"},{"trait_type":"Artist","value":"RektMe Rev"},{"trait_type":"Type","value":"Relic"},{"trait_type":"Tag","value":"Pineapple"},{"display_type":"date","trait_type":"birthday","value":1598450400},{"trait_type":"Max Supply","value":"10000"}]}
     */
 	}
 
 	function contractURI() public view returns (string memory) {
-		return "https://www.rope.lol/";
+		return "https://rope.lol/api/memes-erc1155";
     /* *REPLACE* We need something like https://api.dontbuymeme.com/contract/memes-erc1155
     JSON format
     {"name":"RopeMakers United","description":"Don't Buy Rope","image":"IMG_BANNER_URL.jpg","external_link":"https://www.rope.lol"}
@@ -1236,4 +1236,6 @@ contract RMU is ERC1155Tradable {
 Constructor Argument To Add During Deployment
 OpenSea Registry Address
 000000000000000000000000a5409ec958c83c3f309868babaca7c86dcb077c1
+
+0xa5409ec958c83c3f309868babaca7c86dcb077c1
 */
