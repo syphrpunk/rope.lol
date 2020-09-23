@@ -15,6 +15,7 @@ pragma solidity >=0.5.0 <0.6.0;
 
 
  /*
+
  /$$$$$$$                     /$$ /$$           /$$$$$$$                            /$$$$$$$
 | $$__  $$                   | $/| $$          | $$__  $$                          | $$__  $$
 | $$  \ $$  /$$$$$$  /$$$$$$$|_//$$$$$$        | $$  \ $$ /$$   /$$ /$$   /$$      | $$  \ $$  /$$$$$$   /$$$$$$   /$$$$$$
@@ -35,6 +36,7 @@ https://suicidepreventionlifeline.org/
 1-800-273-8255
 
 https://en.wikipedia.org/wiki/List_of_suicide_crisis_lines
+
 */
 
 
