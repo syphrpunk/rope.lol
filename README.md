@@ -1,3 +1,11 @@
+# Rope.lol
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e988d397-54c2-4aa5-ae2a-7e933cabfa0a/deploy-status)](https://app.netlify.com/sites/gallant-mcnulty-996583/deploys)
+
+Don't buy rope
+
+# Development
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

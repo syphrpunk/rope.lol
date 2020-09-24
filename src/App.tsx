@@ -13,12 +13,17 @@ import RopeProvider from "./contexts/RopeProvider";
 import ModalsProvider from './contexts/Modals'
 import TransactionProvider from './contexts/Transactions'
 import theme from './theme'
+import {CardsPage} from "./components/CardsPage";
 
 const App = () => {
   return (
     <Providers>
       <Router>
         <Switch>
+          <Route path="/cards">
+            <CardsPage />
+          </Route>
+
           <Route path="/">
             <Home />
           </Route>
@@ -32,7 +37,7 @@ const Providers: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <UseWalletProvider
-        chainId={1}
+        chainId={3}
         connectors={{
           walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
         }}

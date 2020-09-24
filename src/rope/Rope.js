@@ -38,8 +38,7 @@ export class Rope {
         }
         this.contracts = new Contracts(realProvider, networkId, this.web3, options)
         this.ropeAddress = contractAddresses.rope[networkId]
-        // this.masterChefAddress = contractAddresses.masterChef[networkId]
-        // this.wethAddress = contractAddresses.weth[networkId]
+        this.ropeMakerAddress = contractAddresses.ropeMaker[networkId]
     }
 
     async resetEVM() {
