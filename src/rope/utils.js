@@ -25,8 +25,15 @@ export const getRopeMakerContract = (rope) => {
 ////
 
 export const getNFTBalance = async (ropeMakerContract, address, id) => {
-    console.log(ropeMakerContract)
     return new BigNumber(await ropeMakerContract.methods.balanceOf(address, id).call());
+}
+
+export const getNFTSupply = async (ropeMakerContract, id) => {
+    return new BigNumber(await ropeMakerContract.methods.totalSupply(id).call())
+}
+
+export const getNFTMaxSupply = async (ropeMakerContract, id) => {
+    return new BigNumber(await ropeMakerContract.methods.maxSupply(id).call())
 }
 
 // const GAS_LIMIT = {
