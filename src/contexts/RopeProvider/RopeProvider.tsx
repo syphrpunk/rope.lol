@@ -22,10 +22,16 @@ const RopeProvider: React.FC = ({ children }) => {
   const { ethereum }: { ethereum: any } = useWallet()
   const [rope, setRope] = useState<any>()
 
+  const { account, connect } = useWallet()
+
   // @ts-ignore
   window.rope = rope
   // @ts-ignore
   window.eth = ethereum
+
+  useEffect(() => {
+    connect('injected')
+  }, [])
 
   useEffect(() => {
     if (ethereum) {
