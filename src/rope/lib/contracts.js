@@ -1,7 +1,8 @@
 import BigNumber from 'bignumber.js/bignumber'
-// import ERC20Abi from './abi/erc20.json'
+import ERC20Abi from './abi/erc20.json'
 // import SushiAbi from './abi/sushi.json'
 // import WETHAbi from './abi/weth.json'
+import RopeMakerAbi from './abi/ropeMaker.json'
 import {
     contractAddresses,
     SUBTRACT_GAS_LIMIT,
@@ -18,8 +19,8 @@ export class Contracts {
         this.defaultGas = options.defaultGas
         this.defaultGasPrice = options.defaultGasPrice
 
-        // this.sushi = new this.web3.eth.Contract(SushiAbi)
-        // this.masterChef = new this.web3.eth.Contract(MasterChefAbi)
+        this.rope = new this.web3.eth.Contract(ERC20Abi)
+        this.ropeMaker = new this.web3.eth.Contract(RopeMakerAbi)
         // this.weth = new this.web3.eth.Contract(WETHAbi)
 
         this.setProvider(provider, networkId)
@@ -33,8 +34,8 @@ export class Contracts {
             else console.error('Contract address not found in network', networkId)
         }
 
-        // setProvider(this.sushi, contractAddresses.sushi[networkId])
-        // setProvider(this.masterChef, contractAddresses.masterChef[networkId])
+        setProvider(this.rope, contractAddresses.rope[networkId])
+        setProvider(this.ropeMaker, contractAddresses.ropeMaker[networkId])
         // setProvider(this.weth, contractAddresses.weth[networkId])
 
         // this.pools.forEach(

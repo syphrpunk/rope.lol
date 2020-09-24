@@ -24,7 +24,7 @@ export const INTEGERS = {
 
 export const contractAddresses = {
     rope: {
-        1: '',
+        1: '0x9d47894f8becb68b9cf3428d256311affe8b068b',
         3: '',
     },
     ropeMaker: {
