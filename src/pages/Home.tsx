@@ -1,40 +1,8 @@
-import React from 'react';
-import AccountButton from "./TopBar/components/AccountButton";
+import React from "react";
 
 export function Home() {
   return (
     <div className="flex flex-col w-screen h-screen justify-between">
-      <div>
-        <header className="visible sm:invisible sm:hidden">
-          <div className="flex justify-end">
-            <img
-              className="object-contain"
-              src="/images/NFTz-coming-soon.png"
-              alt="soon"
-            />
-          </div>
-          <img
-            className="object-contain pl-4 -mt-16"
-            src="/images/ROPE.png"
-            alt="rope"
-          />
-        </header>
-        <header className="hidden invisible sm:flex sm:visible w-full justify-between">
-          <img
-            className="object-contain pl-4"
-            src="/images/ROPE.png"
-            alt="rope"
-          />
-          <div style={{marginTop:20 }}>
-          <AccountButton />
-          </div>
-          <img
-            className="object-contain"
-            src="/images/NFTz-coming-soon.png"
-            alt="soon"
-          />
-        </header>
-      </div>
       <div className="flex flex-col lg:flex-row lg:justify-between lg:px-8">
         <div className="flex">
           <img
@@ -107,5 +75,5 @@ export function Home() {
         </a>
       </div>
     </div>
-  )
+  );
 }

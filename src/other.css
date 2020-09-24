@@ -6,3 +6,7 @@ body {
 .zoom:hover {
   transform: scale(1.2);
 }
+
+.cursive {
+  font-family: "Kaushan Script", cursive;
+}

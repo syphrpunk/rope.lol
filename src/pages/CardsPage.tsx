@@ -7,7 +7,7 @@ import {
 } from '../rope/utils';
 import { useWallet } from 'use-wallet';
 import useRope from '../hooks/useRope';
-import AccountButton from './TopBar/components/AccountButton';
+import AccountButton from '../components/TopBar/components/AccountButton';
 import { RMU } from '../rope/RMU';
 
 interface ICard {
@@ -51,9 +51,9 @@ export function CardsPage() {
   }, [setCards, account, rope]);
 
   return (
-    <div style={{padding: 10}}>
+    <div style={{ padding: 10 }}>
       <AccountButton />
-      <div style={{display: 'flex', flexDirection: 'row'}}>
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
         {Object.values(cards).map((c) => (
           <div key={c.id} style={{ padding: 5 }}>
             <img
