@@ -1,19 +1,16 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from "styled-components";
 import "./other.css";
-import {Home} from "./components/Home";
-import {UseWalletProvider} from "use-wallet";
+import { Home } from "./pages/Home";
+import { UseWalletProvider } from "use-wallet";
 import RopeProvider from "./contexts/RopeProvider";
-import ModalsProvider from './contexts/Modals'
-import TransactionProvider from './contexts/Transactions'
-import theme from './theme'
-import {CardsPage} from "./components/CardsPage";
+import ModalsProvider from "./contexts/Modals";
+import TransactionProvider from "./contexts/Transactions";
+import theme from "./theme";
+import { CardsPage } from "./pages/CardsPage";
+import { DontBuyPage } from "./pages/DontBuyPage";
 
 const App = () => {
   return (
@@ -22,6 +19,9 @@ const App = () => {
         <Switch>
           <Route path="/cards">
             <CardsPage />
+          </Route>
+          <Route path="/dontbuy">
+            <DontBuyPage />
           </Route>
 
           <Route path="/">
@@ -39,19 +39,19 @@ const Providers: React.FC = ({ children }) => {
       <UseWalletProvider
         chainId={3}
         connectors={{
-          walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
+          walletconnect: { rpcUrl: "https://mainnet.eth.aragon.network/" },
         }}
       >
         <RopeProvider>
           <TransactionProvider>
-          {/*  <FarmsProvider>*/}
-              <ModalsProvider>{children}</ModalsProvider>
+            {/*  <FarmsProvider>*/}
+            <ModalsProvider>{children}</ModalsProvider>
             {/*</FarmsProvider>*/}
           </TransactionProvider>
         </RopeProvider>
       </UseWalletProvider>
     </ThemeProvider>
-  )
-}
+  );
+};
 
 export default App;
