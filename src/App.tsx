@@ -15,6 +15,8 @@ import TransactionProvider from './contexts/Transactions'
 import theme from './theme'
 import {CardsPage} from "./components/CardsPage";
 
+const useTestNet = true;
+
 const App = () => {
   return (
     <Providers>
@@ -37,7 +39,7 @@ const Providers: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <UseWalletProvider
-        chainId={3}
+        chainId={useTestNet ? 4 : 1}
         connectors={{
           walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
         }}
