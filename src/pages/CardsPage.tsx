@@ -7,17 +7,11 @@ import {
 } from '../rope/utils';
 import { useWallet } from 'use-wallet';
 import useRope from '../hooks/useRope';
-import AccountButton from '../components/TopBar/components/AccountButton';
 import { RMU } from '../rope/RMU';
+import {Header} from "../components/Header/Header";
+import {NftCard, NftCardProps} from "../components/NftCard";
 
-interface ICard {
-  id: number;
-  supply: number;
-  totalSupply: number;
-  balance: number;
-}
-
-type CardsState = { [id: number]: ICard };
+type CardsState = { [id: number]: NftCardProps };
 
 export function CardsPage() {
   const [cards, setCards] = useState<CardsState>({});
@@ -51,21 +45,11 @@ export function CardsPage() {
   }, [setCards, account, rope]);
 
   return (
-    <div style={{ padding: 10 }}>
-      <AccountButton />
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <div className='flex flex-col w-screen justify-between'>
+      <Header/>
+      <div className='flex justify-center'>
         {Object.values(cards).map((c) => (
-          <div key={c.id} style={{ padding: 5 }}>
-            <img
-              style={{ maxHeight: 200 }}
-              src={(RMU as any)[c.id]['image']}
-              alt={`nft-${c.id}`}
-            />
-            <div>{`NFT ${c.id}`}</div>
-            <div>{`Balance : ${c.balance}`}</div>
-            <div>{`Minted : ${c.supply}`}</div>
-            <div>{`Max Supply : ${c.totalSupply}`}</div>
-          </div>
+          <NftCard {...c} key={c.id}/>
         ))}
       </div>
     </div>
