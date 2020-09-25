@@ -25,10 +25,11 @@ export const INTEGERS = {
 export const contractAddresses = {
     rope: {
         1: '0x9d47894f8becb68b9cf3428d256311affe8b068b',
-        3: '',
+        // Using DAI for testing on testnet
+        4: '0x5592ec0cfb4dbc12d3ab100b257153436a1f0fea',
     },
     ropeMaker: {
         1: '',
-        3: '0xaf9ed4b3301bd338038f4a3795792c48ff858293',
+        4: '0xAF9ED4B3301bD338038f4a3795792c48fF858293',
     }
 }
